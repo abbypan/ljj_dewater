@@ -19,7 +19,6 @@ function extract_floor_info(info) {
 }
 
 function floor_path() {
-    //return '#oneboolt';
     return '.noveltext';
 }
 
