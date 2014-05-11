@@ -2,23 +2,21 @@
 //
 // ==UserScript==
 // @name          ljj_dewater 
-// @namespace     http://abbypan.github.com/
+// @namespace     http://abbypan.github.io/
 // @version       0.1
 // @author        Abby Pan (abbypan@gmail.com)
 // @description   绿晋江( http://www.jjwxc.net ) 小说合集
-// @copyright     2014, Abby Pan (http://abbypan.github.com/) 
+// @copyright     2014, Abby Pan (http://abbypan.github.io/) 
 // @grant         GM_getResourceText
 // @include       http://www.jjwxc.net/onebook.php?novelid=*
 // @exclude       http://www.jjwxc.net/onebook.php?*chapterid=*
 // @resource      bbs_dewater https://raw.github.com/abbypan/bbs_dewater/master/bbs_dewater.js
-// @resource      ljj_dewater ljj_dewater.js
+// @resource      ljj_dewater https://raw.github.com/abbypan/ljj_dewater/master/ljj_dewater.js
+// @downloadURL   http://userscripts.org/scripts/source/486984.user.js
+// @updateURL     http://userscripts.org/scripts/source/486984.meta.js
 // ==/UserScript==
 //
 // --------------------------------------------------------------------
-// @downloadURL   http://userscripts.org/scripts/source/173233.user.js
-// @updateURL     http://userscripts.org/scripts/source/173233.meta.js
-// @resource      hjj_thread_dewater https://raw.github.com/abbypan/hjj_thread_dewater/master/hjj_thread_dewater.js
-
 
 
 function add_js_file(js) {
