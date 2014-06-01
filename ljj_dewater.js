@@ -36,16 +36,16 @@ function get_topic_name() {
 function get_page_num() {
 	var urls = $('a[itemprop="url"]');
 	if (!urls) return 1;
-	return urls.length-1;
+	return urls.length;
 }
 
 function format_thread_url_1st(url) {
 	var urls = $('a[itemprop="url"]');
-    return urls[1];
+    return urls[0];
 }
 
 function format_thread_url_ith(url,i)  {
     var j = parseInt(i) ;
 	var urls = $('a[itemprop="url"]');
-    return urls[j];
+    return urls[j-1];
 }
