@@ -10,10 +10,8 @@
 // @grant         GM_getResourceText
 // @include       http://www.jjwxc.net/onebook.php?novelid=*
 // @exclude       http://www.jjwxc.net/onebook.php?*chapterid=*
-// @resource      bbs_dewater https://raw.github.com/abbypan/bbs_dewater/master/bbs_dewater.js
 // @resource      ljj_dewater https://raw.github.com/abbypan/ljj_dewater/master/ljj_dewater.js
-// @downloadURL   http://userscripts.org/scripts/source/486984.user.js
-// @updateURL     http://userscripts.org/scripts/source/486984.meta.js
+// @resource      bbs_dewater https://github.com/abbypan/bbs_dewater/raw/master/bbs_dewater.js
 // ==/UserScript==
 //
 // --------------------------------------------------------------------
