@@ -11,7 +11,7 @@ function extract_floor_info(info) {
 	var w = c.replace(/<.*?>/g, '');
 	return {
 		content: c,
-		word_num: w.length,
+		//word_num: w.length,
 		poster: title,
 		time: '', 
 		id: null
