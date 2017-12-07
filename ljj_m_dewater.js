@@ -1,9 +1,9 @@
 function banner_path() {
-    return '#oneboolt';
+    return 'div[class="b module"]';
 }
 
 function extract_floor_info(info) {
-    var content = info.parent().find('div[class="noveltext"]');
+    var content = info.parent().parent().find('div[class="b module"]');
     var title = content.find('h2').text();
 
     content.children('div,hr').remove();
@@ -19,7 +19,7 @@ function extract_floor_info(info) {
 }
 
 function floor_path() {
-    return '.noveltext';
+    return '.module';
 }
 
 function page_charset() {
@@ -27,14 +27,13 @@ function page_charset() {
 }
 
 function get_topic_name() {
-    var arr = new Array(2);
-    arr[0] = $('span[itemprop="author"]').text();
-    arr[1] = $('span[itemprop="articleSection"]').text();
-	return arr.join("-");
+    var t = $('title').text();
+    var m = t.match(/<title>《(.*?)》(.*?)_/);
+    return m[1] + '-' + m[2];
 }
 
 function get_page_num() {
-	var urls = $('tr[itemtype="http://schema.org/Chapter"]');
+	var urls = $('a[style="text-decoration:none"]');
 	if (!urls) return 1;
  	return urls.length;
 }
@@ -42,10 +41,10 @@ function get_page_num() {
 function format_thread_url_ith(url,i)  {
     var j = parseInt(i) ;
     j = j-1;
-  	var urls = $('tr[itemtype="http://schema.org/Chapter"]')[j];
+	var urls = $('a[style="text-decoration:none"]')[j];
     var c = urls.innerHTML;
     var x = $(c).find('a')[0];
-    var u = x.getAttribute('href') || x.getAttribute('rel');
+    var u = x.getAttribute('href');
     return u;
 }
 
