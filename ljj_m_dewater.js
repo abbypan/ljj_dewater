@@ -1,25 +1,25 @@
 function banner_path() {
-    return 'div[class="b module"]';
+    return 'h2';
 }
 
 function extract_floor_info(info) {
-    var content = info.parent().parent().find('div[class="b module"]');
-    var title = content.find('h2').text();
 
-    content.children('div,hr').remove();
-	var c = content.html().replace(/<font color="#E.*?<\/font>/g,'');
+    var title = info.text().replace(/^[0-9]+./,'').replace(/\s+\.{3}$/,'');
+
+    var content = info.parent().find('li:first');
+    var c = content.html().replace(/<font color="#E.*?<\/font>/g,'');
 	var w = c.replace(/<.*?>/g, '');
 	return {
 		content: c,
-		//word_num: w.length,
+		word_num: w.length,
 		poster: title,
-		time: '', 
+		time: '',
 		id: null
 	};
 }
 
 function floor_path() {
-    return '.module';
+    return 'h2';
 }
 
 function page_charset() {
@@ -27,27 +27,27 @@ function page_charset() {
 }
 
 function get_topic_name() {
-    var t = $('title').text();
-    var m = t.match(/<title>《(.*?)》(.*?)_/);
-    return m[1] + '-' + m[2];
+    var b = $('h2').html().replace(/^.*\>/,'').replace(/&gt;/,'');
+    var w = $('li a:first').html();
+    var topic=w + '-' + b;
+    return topic;
 }
 
 function get_page_num() {
 	var urls = $('a[style="text-decoration:none"]');
-	if (!urls) return 1;
- 	return urls.length;
+   	if (!urls) return 1;
+ 	return urls.length-2;
 }
 
 function format_thread_url_ith(url,i)  {
     var j = parseInt(i) ;
     j = j-1;
-	var urls = $('a[style="text-decoration:none"]')[j];
-    var c = urls.innerHTML;
-    var x = $(c).find('a')[0];
-    var u = x.getAttribute('href');
+	var ux = $('a[style="text-decoration:none"]')[j];
+    var u = ux.getAttribute('href');
     return u;
 }
 
 function format_thread_url_1st(url) {
     return format_thread_url_ith(url,1);
 }
+
