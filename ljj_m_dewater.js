@@ -26,7 +26,7 @@ function page_charset() {
 
 function get_topic_name() {
     var b = $('h2').html().replace(/^.*\>/,'').replace(/&gt;/,'');
-    var w = $('#left li a:first').html();
+    var w = $('div[id="left"]').find('a:first').html();
     var topic=w + '-' + b;
     return topic;
 }
