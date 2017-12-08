@@ -8,10 +8,8 @@ function extract_floor_info(info) {
 
     var content = info.parent().find('li:first');
     var c = content.html().replace(/<font color="#E.*?<\/font>/g,'');
-	var w = c.replace(/<.*?>/g, '');
 	return {
 		content: c,
-		word_num: w.length,
 		poster: title,
 		time: '',
 		id: null

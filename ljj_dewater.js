@@ -3,15 +3,12 @@ function banner_path() {
 }
 
 function extract_floor_info(info) {
-    var content = info.parent().find('div[class="noveltext"]');
-    var title = content.find('h2').text();
+    var title = info.find('h2').text();
 
-    content.children('div,hr').remove();
-	var c = content.html().replace(/<font color="#E.*?<\/font>/g,'');
-	var w = c.replace(/<.*?>/g, '');
+    info.children('div,hr').remove();
+	var c = info.html().replace(/<font color="#E.*?<\/font>/g,'');
 	return {
 		content: c,
-		//word_num: w.length,
 		poster: title,
 		time: '', 
 		id: null
