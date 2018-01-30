@@ -9,7 +9,9 @@
 // @copyright     2014, Abby Pan (http://abbypan.github.io/)
 // @grant         GM_getResourceText
 // @include       http://www.jjwxc.net/onebook.php?novelid=*
+// @include       https://www.jjwxc.net/onebook.php?novelid=*
 // @exclude       http://www.jjwxc.net/onebook.php?*chapterid=*
+// @exclude       https://www.jjwxc.net/onebook.php?*chapterid=*
 // @resource      ljj_dewater https://raw.githubusercontent.com/abbypan/ljj_dewater/master/ljj_dewater.js
 // @resource      bbs_dewater https://raw.githubusercontent.com/abbypan/bbs_dewater/master/bbs_dewater.js
 // ==/UserScript==
