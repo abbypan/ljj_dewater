@@ -41,9 +41,13 @@ function format_thread_url_ith(url,i)  {
     j = j-1;
   	var urls = $('tr[itemtype="http://schema.org/Chapter"]')[j];
     var c = urls.innerHTML;
-    var x = $(c).find('a')[0];
+    var xx = $(c).find('a');
+    if(xx){
+        var x = xx[0];
     var u = x.getAttribute('href') || x.getAttribute('rel');
     return u;
+    }
+    return ;
 }
 
 function format_thread_url_1st(url) {
