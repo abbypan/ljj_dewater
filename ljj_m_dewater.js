@@ -42,6 +42,10 @@ function format_thread_url_ith(url,i)  {
     j = j-1;
 	var ux = $('a[style="text-decoration:none"]')[j];
     var u = ux.getAttribute('href');
+    var c =  ux.getAttribute('class');
+    if(c=="ls2"){
+        return;
+    }
     return u;
 }
 
