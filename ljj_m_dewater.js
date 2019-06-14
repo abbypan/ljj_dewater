@@ -38,6 +38,7 @@ function get_page_num() {
 }
 
 function format_thread_url_ith(url,i)  {
+    url=url.replace(/\?.*/,'');
     var j = parseInt(i) ;
     j = j-1;
 	var ux = $('a[style="text-decoration:none"]')[j];
@@ -46,7 +47,7 @@ function format_thread_url_ith(url,i)  {
     if(c=="ls2"){
         return;
     }
-    return u;
+    return url + u;
 }
 
 function format_thread_url_1st(url) {
