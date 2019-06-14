@@ -42,10 +42,10 @@ function format_thread_url_ith(url,i)  {
   	var urls = $('tr[itemtype="http://schema.org/Chapter"]')[j];
     var c = urls.innerHTML;
     var xx = $(c).find('a');
-    if(xx){
+    if(xx[0]){
         var x = xx[0];
-    var u = x.getAttribute('href') || x.getAttribute('rel');
-    return u;
+        var u = x.getAttribute('href') || x.getAttribute('rel');
+        return u;
     }
     return ;
 }
