@@ -47,7 +47,7 @@ function format_thread_url_ith(url,i)  {
     if(c=="ls2"){
         return;
     }
-    return url + u;
+    return url + '/' + i;
 }
 
 function format_thread_url_1st(url) {
